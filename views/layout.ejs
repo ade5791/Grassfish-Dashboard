@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grassfish Dashboard</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='../../css/style.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+   
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/ndq7mad.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+    <!-- jquery import -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- font awesome for the icons -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    
+    
+
+</head>
+<body>
+    <header id="header" class="gradientborder">
+            <nav id="menu" class="desktopmenu">
+                <ul><li>
+                        <button class="tasknav main-nav-btn" id="runALL" onclick = "runALL()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/task.png">
+                            <span class="mhider">Home</span></button>
+                    </li><li>
+                        <button class="accountnav main-nav-btn" id="runALL"  onclick = "runchewy()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">chewy</span></button>
+                    </li><li>
+                        <button class="proxynav main-nav-btn" onclick = "runELC()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">Elc</span></button>
+                    </li><li>
+                        <button class="proxynav main-nav-btn" onclick = "runEstee()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">ESTEE</span></button>
+                    </li>
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runMac()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">MAC</span></button>
+                    </li>
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runClinique()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">CLINIQUE</span></button>
+                    </li>
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runTormford()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">TORMFORD</span></button>
+                    </li>
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runBobbybrown()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">BOBBYBROWN</span></button>
+                    </li>
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runAveda()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">AVEDA</span></button>
+                    </li>
+                   
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runLamer()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">LAMER</span></button>
+                    </li>
+                   
+                   
+                
+                </ul>
+            </nav>
+
+    </header>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <%- body %>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"
+integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w=="
+crossorigin="anonymous">
+</script>
+
+
+<script>
+    $('.mmholder').click(function() {
+        $(".mobile-menu-item").toggleClass('shown');
+        $(".nav-button-open").toggleClass('nav-button-close');
+    });
+    
+    function  runchewy(){
+
+$.ajax({
+    type: 'POST',
+    url: "/chewy/getchewyplayers",
+    success: function() {
+        window.location.pathname = "/chewy/chewydashboard"
+    }
+});
+}
+
+
+function  runELC(){
+
+$.ajax({
+    type: 'POST',
+    url: "/elc/getelcplayers",
+    success: function() {
+       window.location.pathname = "/elc/elcdashboard"
+    }
+});
+}
+
+
+
+function  runMac(){
+
+$.ajax({
+    type: 'POST',
+    url: "/mac/getmacplayers",
+    success: function() {
+       window.location.pathname = "/mac/macdashboard"
+    }
+});
+}
+
+
+
+function  runTormford(){
+
+$.ajax({
+    type: 'POST',
+    url: "/tomford/gettomfordplayers",
+    success: function() {
+       window.location.pathname = "/tomford/tomforddashboard"
+    }
+});
+}
+
+
+
+function  runClinique(){
+
+$.ajax({
+    type: 'POST',
+    url: "/clinique/getcliniqueplayers",
+    success: function() {
+       window.location.pathname = "/clinique/cliniquedashboard"
+    }
+});
+}
+
+
+
+function  runBobbybrown(){
+
+$.ajax({
+    type: 'POST',
+    url: "/bobbybrown/getbobbybrownplayers",
+    success: function() {
+       window.location.pathname = "/bobbybrown/bobbybrowndashboard"
+    }
+});
+}
+
+
+function  runEstee(){
+
+$.ajax({
+    type: 'POST',
+    url: "/estee/getesteeplayers",
+    success: function() {
+       window.location.pathname = "/estee/esteedashboard"
+    }
+});
+}
+
+function  runAveda(){
+
+$.ajax({
+    type: 'POST',
+    url: "/aveda/getavedaplayers",
+    success: function() {
+       window.location.pathname = "/aveda/avedadashboard"
+    }
+});
+}
+
+function  runLamer(){
+
+$.ajax({
+    type: 'POST',
+    url: "/lamer/getlamerplayers",
+    success: function() {
+       window.location.pathname = "/lamer/lamerdashboard"
+    }
+});
+}
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,758 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+p,h5,h6 {
+    font-family: antarctican-mono, sans-serif;
+    letter-spacing: .04em;
+    line-height: 1.4em;
+}
+
+h2,h3,h4 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: .03em;
+    line-height: 1.2em;
+}
+
+h1 {
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 0em;
+    line-height: 1.1em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+a {
+    font-family: franca;
+    color: #e84d34;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+body {
+    background-color: #efefef;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+
+
+/* ----------------------------------------------------- NAV ---------------------------------------------------- */    
+
+#mobile-menu {
+    display: none;
+}
+
+header {
+    background-color: #121215;
+    width: 120px;
+    box-sizing: border-box;
+    padding: 0;
+    z-index: 9999;
+    border-right: 2px solid;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.gradientborder {
+    box-sizing: border-box;
+    border-bottom-style: solid;
+    border-image: linear-gradient( to bottom, #ff7466, #000000, #6cf5ff ) 1 100%;
+}
+
+#header nav ul li {
+    display:block;
+    text-decoration: none;
+    vertical-align: middle;
+    font-family: antarctican-mono, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#header nav {
+    width: 100%;
+}
+
+.main-nav-btn {
+    background-color: #121215;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 0;
+    border: none;
+    border-bottom: 1px solid #515867;
+}
+
+.main-nav-btn img {
+    height: 30px;
+    width: auto;
+    margin: 0 auto 10px;
+}
+
+.main-nav-btn span {
+    color: #fff;
+}
+
+.main-nav-btn:hover {
+    background-color: #ff7466;
+}
+
+.main-nav-btn:focus, .main-nav-btn:active {
+     background-color: #515867;
+     border: none;
+     outline: none;
+}
+
+.openbtn,#createaccount,#createproxie {
+    background-color: #121215;
+    color: #6cf5ff;
+    border: 2px solid #6cf5ff;
+    padding: 5px 12px 7px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-family: 'antarctican-mono';
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+.openbtn:hover {
+    background-color: #6cf5ff;
+    color: #121215;
+    cursor: pointer;
+}
+
+.discordbtn {
+    background-color: #191a1c;
+    color: #597cbd;
+    border: 0;
+    padding: 30px 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: 'antarctican-mono';
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+.discordbtn span {
+    color: #597cbd;
+}
+
+a .discordbtn span {
+    text-decoration: none;
+}
+
+.discordbtn svg {
+    display: block;
+    fill: #597cbd !important;
+    width: 40px;
+    padding: 0;
+    vertical-align: middle;
+    margin: 0 auto 10px;
+}
+
+.discordbtn:hover {
+    background-color: #597cbd;
+    color: white !important;
+    cursor: pointer;
+    fill: black;
+}
+
+.discordbtn:hover span {
+    color: white;
+}
+
+.discordbtn:hover svg {
+    fill: white !important;
+}
+
+.dashbtn {
+    background-color: #121215;
+    color: #ff7466;
+    border: 2px solid #ff7466;
+    padding: 5px 12px 7px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-family: 'antarctican-mono';
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-align: center;
+    margin-left: 12px;
+}
+
+.dashbtn:hover {
+    background-color: #ff7466;
+    color: #121215;
+    cursor: pointer;
+}
+
+#branding {
+    width: auto;
+    margin: 20px 0 0 140px;
+    text-align: center;
+    display: inline-block;
+    opacity: .2;
+}
+
+#branding svg {
+    max-height: 40px;
+    width: auto;
+    fill: white !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.task-btns {
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.main-nav-btn span {
+    font-family: 'antarctican-mono', monospace;
+    font-size: .9em;
+    letter-spacing: -.02em;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+
+/* ---------------------------- BODY --------------------------- */
+
+.overWrapper {
+    max-width: calc(100% - 120px);
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 0 0 140px;
+}
+
+html, body {
+    background-color: #191a1c;
+    color: #fff;
+}
+
+table {
+    border-spacing: 0;
+}
+
+.status-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.task-table-titles {
+    width: 100%;
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+    color: #515867;
+}
+
+.task-table-titles th,.account-table-titles th,.proxie-table-titles th {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    font-family: 'antarctican-mono', monospace;
+    font-weight: 500;
+    font-style: normal;
+    color: #919aa8;
+}
+
+.task-table {
+}
+
+.task-table tr.Failed {
+    background-color: #ff7466;
+}
+
+.task-table tr.Success {
+    background-color: #6cf5ff;
+    color: black;
+}
+
+.task-table tr.Waiting {
+    color: #515867;
+}
+
+tr.Active {
+    color: #6cf5ff;
+}
+
+tr.spacer{
+    height: 8px;
+}
+
+tr.task-row {
+    background-color: #121215;
+    border: 1px solid white;
+    overflow: hidden;
+    border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+}
+
+.task-row td:first-child {
+    border-radius: 15px 0 0 15px !important;
+}
+
+.task-row td:last-child {
+    border-radius: 0 15px 15px 0 !important;
+}
+
+.task-row td {
+    font-family: antarctican-mono, sans-serif;
+    letter-spacing: .04em;
+    line-height: 1.4em;
+    font-size: .8em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.task-row .Inactive {
+    color: #ea362d;
+}
+
+.task-row .Active {
+    color: #6cf5ff;
+}
+
+.task-row .stop {
+    font: antarctican-mono, sans-serif;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+button.stop {
+    font-size: 12px !important;
+    vertical-align: middle;
+    background-color: #121215;
+    border: 1px solid #ff7466;
+    color: #ff7466;
+    border-radius: 15px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.task-row .stop svg {
+    width: 20px;
+    height: auto;
+    fill: #ff7466;
+    padding: 0 0 0 10px;
+    vertical-align: middle;
+}
+
+.task-row button.stop:hover {
+    color: #121215;
+    background-color: #ff7466;
+}
+
+.task-row button.stop:hover svg {
+    fill: #121215;
+}
+
+.stp-btn-text {
+    display: inline-block;
+    padding-top: 2px;
+    vertical-align: middle;
+}
+
+.storepng svg {
+    height: auto;
+    display: inline-block;
+    width: 40px;
+    vertical-align: middle;
+    fill: #fff;
+    stroke: none;
+}
+
+.emailt, .task-row .account-email {
+    text-align: left;
+}
+
+.sts {
+    word-wrap: break-word;
+    width: 80px;
+}
+
+.ats {
+    padding: 0 10px;
+    text-align: left;
+}
+
+.cts {
+    width: 85px;
+}
+
+.dashbtn svg {
+    display: inline-block;
+    fill: #ff7466 !important;
+    width: 20px;
+    padding: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+.tskbtn svg {
+    display: inline-block;
+    fill: #6cf5ff !important;
+    width: 20px;
+    padding: 0 5px 0 0;
+    vertical-align: middle;
+}
+
+.tskbtn svg path {
+    fill: #6cf5ff;
+}
+
+.spng {
+    width: 40px;
+    padding: 10px;
+}
+
+/* ------------------------------ Overlay ------------------------------ */
+
+.overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background: rgba(18,18,21,.8);
+    text-align: center;
+}
+
+.overlay:before {
+    content: '';
+    display: inline-block;
+    height: 80%;
+    margin-left: -.27em;
+    vertical-align: middle;
+}
+
+.nt-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #121215;
+    border-radius: 20px;
+    max-width: 450px;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 2px solid #6cf5ff;
+    position: relative;
+    margin: 40px auto;
+}
+
+.nt-wrapper h2 {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.nt-wrapper .form-group {
+    text-align: left;
+}
+
+.nt-wrapper label {
+    color: #919aa8;
+    font-family: antarctican-mono, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.nt-wrapper input {
+    margin: 5px 0 12px;
+    background-color: #191a1c;
+    color: #fff;
+    font-family: futura-pt, sans-serif;
+    font-size: 16px;
+    letter-spacing: .03em;
+}
+
+.nt-wrapper select {
+    color: #919aa8;
+    background-color: #191a1c;
+    padding: 3px 5px 4px;
+    border-radius: 15px;
+}
+
+span.upcoming a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #6cf5ff;
+}
+
+.staskbtn, .formbtn {
+    border: 2px solid #6cf5ff;
+    background-color: #191a1c;
+    color: #6cf5ff;
+    border-radius: 15px;
+    text-transform: uppercase;
+    padding: 5px 10px 7px;
+    font-family: antarctican-mono, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.formbtnx {
+    border: 2px solid #ff7466;
+    background-color: #191a1c;
+    color: #ff7466;
+    border-radius: 15px;
+    text-transform: uppercase;
+    padding: 5px 10px 7px;
+    font-family: antarctican-mono, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.formbtnx:hover {
+    background-color: #6cf5ff;
+    color: #191a1c;
+}
+
+.formbtn:hover {
+    background-color: #ff7466;
+    color: #191a1c;
+}
+
+.staskbtn:hover {
+    background-color: #6cf5ff;
+    color: black;
+    cursor: pointer;
+}
+
+form {
+    margin: 30px auto;
+}
+
+
+/* --------------------------- collapsing --------------------------- */
+
+/* ----------------------------------------------------------------------- nothing beyond --------------------------------------------------------------- */
+
+
+/* --------------------------- Check Box --------------------------- */
+/* Customize the label (the container) */
+.cctain {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+  max-width: 500px;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.cctain input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.cctain:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.cctain input:checked ~ .checkmark {
+  background-color: #e84d34;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.cctain input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.cctain .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ///////////////////////////////////////////////// ENGAGE ////////////////////////////////////////////////// */
+
+.engage h1 a {
+    font-family: losta;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: .05em;
+    font-size: .7em;
+}
+
+.engage h1 {
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.engage h3 {
+    font-family: franca;
+    font-weight: 400;
+    padding-bottom: 20px;
+    color: #2b2b2b;
+    letter-spacing: .02em;
+    max-width: 600px;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.4em;
+}
+
+.engage h5 {
+    font-family: franca;
+    font-weight: 800;
+}
+
+.engage .idvposts {
+    width: calc(33% - 4px);
+    box-sizing: border-box;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.engage .meta {
+    font-size: .9em;
+    font-family: franca;
+    text-transform: capitalize;
+    letter-spacing: .03em;
+    margin-top: 5px;
+}
+
+  #Timenow {
+    font-family: "Andale Mono", "Andale Mono WT", monospace;
+    font-size: .8em;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-rendering: optimizeLegibility;
+    color: #e84d34;
+    font-weight: 600;
+  }
+
+  #Runtime {
+    font-family: "Andale Mono", "Andale Mono WT", monospace;
+    font-size: .8em;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-rendering: optimizeLegibility;
+    color: #000;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 10px dashed #000;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+
+/* ------------------------------------------------------ query 1200 ------------------------------------------------------ */
+
+@media only screen and (max-width: 1200px) {
+}
+
+
+/* ------------------------------------------------------ query 1024 ------------------------------------------------------ */
+
+@media only screen and (max-width: 1024px) {
+}
+
+
+/* ------------------------------------------------------ query 768 ------------------------------------------------------ */
+
+@media only screen and (max-width: 768px) {
+}
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mac Players</title>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    </head>
+
+<body>
+    <div id="branding">
+        <h1>
+         Mac Players       
+        </h1>
+  </div>
+   
+<table id="DashTable" class="display status-table" style="position: relative;">
+    
+    <thead class="task-table-titles">
+        <tr class="flex">
+          <th class="">ID<span class=""></span></th>
+          <th class="">Name<span class=""></span></th>
+          <th class="">BoxID<span class=""></span></th>
+          <th class="">Address</th>
+          <th class="">Status</th>
+          <th class="" id="">Last Access</th>
+        </tr><tr class="spacer"></tr>
+      </thead>
+
+      <tbody class="task-table">
+
+        <% results.forEach(result => { %>
+        
+        <tr class="<%=result.Id%>row task-row flex" id="<%=result.ID%>task-row">
+
+            <td class=""><span id="<%=result.Id%>account" name="<%=result.Id%>account"
+                value="<%= result.Id%>" class=""></span><%= result.Id %></td>
+
+
+            <td class=""><span  id="<%=result.Name%>name" name="<%=result.Name%>name"
+             value="<%= result.Name %>"></span><%= result.Name %></td>
+
+         
+             <td class=""><span  id="<%=result.BoxId%>"" name="<%=result.BoxId%>size"
+              value="<%= result.BoxId %>"></span><%= result.BoxId %></td>
+
+              <td class=""><span  id="<%=result.Address%>" name="<%=result.Address%>"
+                value="<%= result.Address %>"></span><%= result.Address %></td>
+    
+             <td class=""><span id="<%=result.StatusNr%>runtime" name="<%=result.StatusNr%>runtime"
+                  ><%=result.StatusNr %></span></td>
+
+
+             <td class=""><span  id="<%=result.LastAccessDate%>date" name="<%=result.LastAccessDate%>date"
+                  ><%= result.LastAccessDate %></span></td>
+
+         
+
+        </tr></div><tr class="spacer"></tr>
+     
+          
+          
+
+   
+        <% }) %>
+    </table>
+
+
+  
+
+</div>
+   
+</div>
+  
+   
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+
+</html>
