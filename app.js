@@ -64,6 +64,6 @@ router.route("/orders/:id").get((request, response) => {
   });
 });
 
-var port = process.env.PORT || 8090;
+var port = process.env.PORT || 3000;
 app.listen(port);
 console.log("Grassfish Dashboard running at " + port);
