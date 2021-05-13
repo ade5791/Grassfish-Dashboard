@@ -9,7 +9,7 @@ async function getchewyPlayers() {
     // console.log(sqlPool);
     let players = await sqlPool
       .request()
-      .query("SELECT TOP 100 *  where BoxStatus=1 from dw.vwPlayers");
+      .query("SELECT TOP 1000 * from dw.vwPlayers");
 
     return players.recordsets;
   } catch (error) {
@@ -22,7 +22,7 @@ async function getelcPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query("SELECT TOP 1000 * where BoxStatus=1 from dw.vwPlayers");
+      .query("SELECT TOP 1000 * from dw.vwPlayers");
     return players.recordsets;
   } catch (error) {
     console.log(error);
