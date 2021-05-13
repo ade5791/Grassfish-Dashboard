@@ -9,7 +9,7 @@ async function getchewyPlayers() {
     // console.log(sqlPool);
     let players = await sqlPool
       .request()
-      .query("SELECT TOP 100 *  where BoxStatus=1from dw.vwPlayers");
+      .query("SELECT TOP 100 *  where BoxStatus=1 from dw.vwPlayers");
 
     return players.recordsets;
   } catch (error) {
