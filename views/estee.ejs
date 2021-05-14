@@ -31,9 +31,7 @@
 
         <% results.forEach(result => { %>
         
-         <tr class="<%=result.Id%>" id="<%=result.ID%>"></tr>
-
-
+         <tr class="<%=result.Id%>row task-row flex" id="<%=result.ID%>task-row">
 
             <td class=""><span  id="<%=result.DayOffline%>DaysOffline" name="<%=result.DayOffline%>name"
              value="<%= result.DayOffline %>"></span><%= result.DayOffline %></td>

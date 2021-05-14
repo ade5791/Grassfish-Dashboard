@@ -333,11 +333,12 @@ tr.spacer{
 }
 
 tr.task-row {
-    background-color: #121215;
+
     border: 1px solid white;
     overflow: hidden;
     border-radius: 15px !important;
     -moz-border-radius: 15px !important;
+    margin-left: 30px !important;
 }
 
 .task-row td:first-child {
@@ -357,6 +358,7 @@ tr.task-row {
     text-align: center;
     padding: 10px;
     border-radius: 0;
+    margin-left: 30px !important;
 }
 
 .task-row .Inactive {
