@@ -31,10 +31,8 @@
 
         <% results.forEach(result => { %>
         
-       
+         <tr class="<%=result.Id%>" id="<%=result.ID%>"></tr>
 
-            <td class=""><span id="<%=result.Id%>account" name="<%=result.Id%>account"
-                value="<%= result.Id%>" class=""></span><%= result.Id %></td>
 
 
             <td class=""><span  id="<%=result.DayOffline%>DaysOffline" name="<%=result.DayOffline%>name"
