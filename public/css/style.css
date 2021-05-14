@@ -296,13 +296,16 @@ table {
 }
 
 .task-table-titles th,.account-table-titles th,.proxie-table-titles th {
-    font-size: 10px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: -.02em;
     font-family: 'antarctican-mono', monospace;
     font-weight: 500;
     font-style: normal;
     color: #919aa8;
+}
+
+.task-table {
 }
 
 .task-table {
