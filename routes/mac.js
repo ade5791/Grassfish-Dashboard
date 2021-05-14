@@ -14,10 +14,11 @@ router.get("/macdashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "M.A.C.") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("mac", { results: results });
     // console.log(req.sessionID);
@@ -31,10 +32,11 @@ router.post("/getmacplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "M.A.C.") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("mac", { results: results });
     // console.log(req.sessionID)

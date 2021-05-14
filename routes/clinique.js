@@ -14,10 +14,11 @@ router.get("/cliniquedashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Clinique") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("clinique", { results: results });
     // console.log(req.sessionID);
@@ -31,10 +32,11 @@ router.post("/getcliniqueplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Clinique") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("clinique", { results: results });
     // console.log(req.sessionID)

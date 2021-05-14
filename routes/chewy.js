@@ -10,14 +10,8 @@ let router = express.Router();
 
 router.get("/chewydashboard", function (req, res, next) {
   dboperations.getchewyPlayers().then((result) => {
-    let results = [];
-    let Pullresults = result[0];
+    let results = result[0];
 
-    Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
-        results.push(result);
-      }
-    });
     //results = res.json(result);
     res.render("chewy", { results: results });
     // console.log(req.sessionID);
@@ -26,14 +20,8 @@ router.get("/chewydashboard", function (req, res, next) {
 
 router.post("/getchewyplayers", function (req, res, next) {
   dboperations.getchewyPlayers().then((result) => {
-    let results = [];
-    let Pullresults = result[0];
+    let results = result[0];
 
-    Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
-        results.push(result);
-      }
-    });
     //results = res.json(result);
     res.render("chewy", { results: results });
     // console.log(req.sessionID)

@@ -14,10 +14,11 @@ router.get("/bobbybrowndashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Bobbi Brown") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("bobbybrown", { results: results });
     // console.log(req.sessionID);
@@ -31,10 +32,11 @@ router.post("/getbobbybrownplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Bobbi Brown") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("bobbybrown", { results: results });
     // console.log(req.sessionID)

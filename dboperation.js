@@ -22,7 +22,7 @@ async function getelcPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query("SELECT TOP 1000 * from dw.vwPlayers");
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -34,9 +34,7 @@ async function getmacPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=4 and BoxStatus=1 order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -48,9 +46,7 @@ async function getesteePlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=6 and BoxStatus=1 order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -62,9 +58,7 @@ async function getavedaPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=5 and BoxStatus=1 order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -76,9 +70,7 @@ async function gettomfordPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=3 and BoxStatus=1order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -90,9 +82,7 @@ async function getcliniquePlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=11 and BoxStatus=1 order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -103,9 +93,7 @@ async function getbobbybrownPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=8 and BoxStatus=1 order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);
@@ -117,9 +105,7 @@ async function getlamerPlayers() {
     let sqlPool = await mssql.GetCreateIfNotExistPool(config.elcconfig);
     let players = await sqlPool
       .request()
-      .query(
-        "SELECT TOP 1000 * from dw.vwPlayers where CustomerId=2 and BoxStatus=1 order by LastAccessDate"
-      );
+      .query("SELECT * from dbo.dbo_vid_vwoffline  Order by DayOffline");
     return players.recordsets;
   } catch (error) {
     console.log(error);

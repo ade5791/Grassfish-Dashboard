@@ -14,10 +14,11 @@ router.get("/esteedashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Estee Lauder") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("estee", { results: results });
     // console.log(req.sessionID);
@@ -31,10 +32,11 @@ router.post("/getesteeplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Estee Lauder") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("estee", { results: results });
     // console.log(req.sessionID)

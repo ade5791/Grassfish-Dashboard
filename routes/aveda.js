@@ -14,10 +14,11 @@ router.get("/avedadashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Aveda") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("aveda", { results: results });
     // console.log(req.sessionID);
@@ -31,10 +32,11 @@ router.post("/getavedaplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Aveda") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("aveda", { results: results });
     // console.log(req.sessionID)

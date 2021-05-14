@@ -14,10 +14,11 @@ router.get("/lamerdashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "La Mer") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("lamer", { results: results });
     // console.log(req.sessionID);
@@ -31,7 +32,7 @@ router.post("/getlamerplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "La Mer") {
         results.push(result);
       }
     });

@@ -14,7 +14,7 @@ router.get("/tomforddashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Tom Ford Beauty") {
         results.push(result);
       }
     });
@@ -31,10 +31,11 @@ router.post("/gettomfordplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.LastAccessDate) {
+      if (result.name == "Tom Ford Beauty") {
         results.push(result);
       }
     });
+
     //results = res.json(result);
     res.render("tomford", { results: results });
     // console.log(req.sessionID)
