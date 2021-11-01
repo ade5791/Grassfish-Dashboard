@@ -233,7 +233,7 @@ a .discordbtn span {
 #branding {
     width: auto;
     margin: 20px 0 0 140px;
-    text-align: center;
+    text-align: left;
     display: inline-block;
     opacity: .2;
 }
@@ -664,78 +664,7 @@ form {
   transform: rotate(45deg);
 }
 
-/* ///////////////////////////////////////////////// ENGAGE ////////////////////////////////////////////////// */
 
-.engage h1 a {
-    font-family: losta;
-    font-weight: 800;
-    text-decoration: none;
-    letter-spacing: .05em;
-    font-size: .7em;
-}
-
-.engage h1 {
-    margin-top: 40px;
-    margin-bottom: 0;
-}
-
-.engage h3 {
-    font-family: franca;
-    font-weight: 400;
-    padding-bottom: 20px;
-    color: #2b2b2b;
-    letter-spacing: .02em;
-    max-width: 600px;
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    line-height: 1.4em;
-}
-
-.engage h5 {
-    font-family: franca;
-    font-weight: 800;
-}
-
-.engage .idvposts {
-    width: calc(33% - 4px);
-    box-sizing: border-box;
-    margin: 10px 0;
-    display: inline-block;
-}
-
-.engage .meta {
-    font-size: .9em;
-    font-family: franca;
-    text-transform: capitalize;
-    letter-spacing: .03em;
-    margin-top: 5px;
-}
-
-  #Timenow {
-    font-family: "Andale Mono", "Andale Mono WT", monospace;
-    font-size: .8em;
-    letter-spacing: .03em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-rendering: optimizeLegibility;
-    color: #e84d34;
-    font-weight: 600;
-  }
-
-  #Runtime {
-    font-family: "Andale Mono", "Andale Mono WT", monospace;
-    font-size: .8em;
-    letter-spacing: .03em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-rendering: optimizeLegibility;
-    color: #000;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 10px dashed #000;
-    border-radius: 4px;
-    font-weight: 600;
-  }
 
 /* ------------------------------------------------------ query 1200 ------------------------------------------------------ */
 

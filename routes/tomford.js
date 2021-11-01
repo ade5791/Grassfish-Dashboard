@@ -9,7 +9,7 @@ const dboperations = require("../dboperation");
 let router = express.Router();
 
 router.get("/tomforddashboard", function (req, res, next) {
-  dboperations.gettomfordPlayers().then((result) => {
+  dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
 
@@ -26,7 +26,7 @@ router.get("/tomforddashboard", function (req, res, next) {
 });
 
 router.post("/gettomfordplayers", function (req, res, next) {
-  dboperations.gettomfordPlayers().then((result) => {
+  dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
 

@@ -9,7 +9,7 @@ const dboperations = require("../dboperation");
 let router = express.Router();
 
 router.get("/esteedashboard", function (req, res, next) {
-  dboperations.getesteePlayers().then((result) => {
+  dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
 
@@ -27,7 +27,7 @@ router.get("/esteedashboard", function (req, res, next) {
 });
 
 router.post("/getesteeplayers", function (req, res, next) {
-  dboperations.getesteePlayers().then((result) => {
+  dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
 

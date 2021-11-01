@@ -9,10 +9,10 @@ const dboperations = require("../dboperation");
 let router = express.Router();
 
 router.get("/cliniquedashboard", function (req, res, next) {
-  dboperations.getcliniquePlayers().then((result) => {
+  dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
-
+    console.log(Pullresults);
     Pullresults.forEach((result) => {
       if (result.name == "Clinique") {
         results.push(result);
@@ -27,10 +27,10 @@ router.get("/cliniquedashboard", function (req, res, next) {
 });
 
 router.post("/getcliniqueplayers", function (req, res, next) {
-  dboperations.getcliniquePlayers().then((result) => {
+  dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
-
+    console.log(Pullresults);
     Pullresults.forEach((result) => {
       if (result.name == "Clinique") {
         results.push(result);

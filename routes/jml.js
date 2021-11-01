@@ -8,39 +8,39 @@ const dboperations = require("../dboperation");
 
 let router = express.Router();
 
-router.get("/avedadashboard", function (req, res, next) {
-  dboperations.getelcPlayers().then((result) => {
-    let results = [];
-    let Pullresults = result[0];
-    console.log(Pullresults);
-    Pullresults.forEach((result) => {
-      if (result.name == "Aveda") {
-        results.push(result);
-      }
-    });
-
-    //results = res.json(result);
-    res.render("aveda", { results: results });
-    // console.log(req.sessionID);
-    console.log("aveda players loaded");
-  });
-});
-
-router.post("/getavedaplayers", function (req, res, next) {
+router.get("/jmldashboard", function (req, res, next) {
   dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
       console.log(result);
-
-      if (result.name == "Aveda") {
+      if (result.name == "Jo Malone") {
         results.push(result);
       }
     });
 
     //results = res.json(result);
-    res.render("aveda", { results: results });
+    res.render("jml", { results: results });
+    // console.log(req.sessionID);
+    console.log("jml players loaded");
+  });
+});
+
+router.post("/getjmlplayers", function (req, res, next) {
+  dboperations.getelcPlayers().then((result) => {
+    let results = [];
+    let Pullresults = result[0];
+
+    Pullresults.forEach((result) => {
+      console.log(result);
+      if (result.name == "Jo Malone") {
+        results.push(result);
+      }
+    });
+
+    //results = res.json(result);
+    res.render("jml", { results: results });
     // console.log(req.sessionID)
   });
 });

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Jo Malone Players</title>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    </head>
+
+<body>
+    <div id="branding">
+        <h1>
+         JO Malone Players       
+        </h1>
+  </div>
+   
+<table id="DashTable" class="display status-table" style="position: relative;">
+    
+     <thead class="task-table-titles">
+        <tr class="flex">
+      
+          <th class="">OFF</span></th>
+          <th class="">BoxID</th>
+          <th class="">Name</th>
+          <th class="" id="">City</th>
+        </tr><tr class="spacer"></tr>
+      </thead>
+ 
+      <tbody class="task-table">
+          
+        <% results.forEach(result => { %>
+         
+          
+        
+         <tr class="<%=result.Id%>row task-row flex" id="<%=result.ID%>task-row">
+
+          
+
+
+            <td class=""><span  id="<%=result.DayOffline%>OFF<%=result.DayOffline%>name"
+             value="<%= result.DayOffline %>"></span><%= result.DayOffline %></td>
+         
+             <td class=""><span  id="<%=result.BoxId%>" name="<%=result.BoxId%>size"
+              value="<%= result.BoxId %>"></span><%= result.BoxId %></td>
+
+              <td class=""><span id="<%=result.Expr1%>runtime" name="<%=result.Expr1%>runtime"
+                ><%=result.Expr1 %></span></td>
+
+
+              <td class=""><span  id="<%=result.City%>" name="<%=result.City%>"
+                value="<%= result.City %>"></span><%= result.City %></td>
+
+         
+
+        </tr></div><tr class="spacer"></tr>
+     
+          
+          
+
+   
+        <% }) %>
+    </table>
+
+
+  
+
+</div>
+   
+</div>
+  
+   
+    <script type="text/javascript">
+
+
+    </script>
+</body>
+
+</html>
