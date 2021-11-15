@@ -26,13 +26,17 @@
 
 </head>
 <body>
-    <!--<header id="header" class="gradientborder">
+    <header id="header" class="gradientborder">
             <nav id="menu" class="desktopmenu">
-                <ul><li>
-                        <button class="tasknav main-nav-btn" id="runALL" onclick = "runALL()">
+                <ul>
+                    
+                    <li>
+                        <button class="tasknav main-nav-btn" id="runALL" onclick = "runELC()">
                             <img src="https://postdigi.com/wp-content/uploads/2021/03/task.png">
-                            <span class="mhider">Home</span></button>
-                    </li><li>
+                            <span class="mhider">Home - All ELC</span></button>
+                    </li>
+                    
+                    <!--<li>
                         <button class="accountnav main-nav-btn" id="runALL"  onclick = "runchewy()">
                             <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
                             <span class="mhider">chewy</span></button>
@@ -40,7 +44,10 @@
                         <button class="proxynav main-nav-btn" onclick = "runELC()">
                             <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
                             <span class="mhider">Elc</span></button>
-                    </li><li>
+                    </li>
+                    
+                -->
+                    <li>
                         <button class="proxynav main-nav-btn" onclick = "runEstee()">
                             <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
                             <span class="mhider">ESTEE</span></button>
@@ -77,12 +84,18 @@
                             <span class="mhider">LAMER</span></button>
                     </li>
                    
+                    <li>
+                        <button class="proxynav main-nav-btn" onclick = "runJML()">
+                            <img src="https://postdigi.com/wp-content/uploads/2021/03/account.png">
+                            <span class="mhider">Jo Malone</span></button>
+                    </li>
+                   
                    
                 
                 </ul>
             </nav>
 
-    </header> -->
+    </header>
     <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <%- body %>
 
@@ -204,6 +217,17 @@ $.ajax({
     url: "/lamer/getlamerplayers",
     success: function() {
        window.location.pathname = "/lamer/lamerdashboard"
+    }
+});
+}
+
+function  runJML(){
+
+$.ajax({
+    type: 'POST',
+    url: "/JML/getjmlplayers",
+    success: function() {
+       window.location.pathname = "/JML/jmldashboard"
     }
 });
 }

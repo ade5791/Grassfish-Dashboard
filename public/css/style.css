@@ -89,10 +89,11 @@ header {
     padding: 0;
     z-index: 9999;
     border-right: 2px solid;
-    position: fixed;
+    position:fixed;
     left: 0;
     top: 0;
     bottom: 0;
+   
 }
 
 .gradientborder {
@@ -275,10 +276,13 @@ a .discordbtn span {
 html, body {
     background-color: #191a1c;
     color: #fff;
+    margin-left: 5%;
+    
 }
 
 table {
     border-spacing: 0;
+   margin-right: 50%;
 }
 
 .status-table {
@@ -286,12 +290,12 @@ table {
     max-width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+    margin-right: 600;
 }
 
 .task-table-titles {
-    width: 100%;
-    max-width: calc(100% - 60px);
-    margin: 0 auto;
+    margin-right: 100px !important;
+
     color: #515867;
 }
 
@@ -306,7 +310,12 @@ table {
 }
 
 .task-table {
+    width: 100%;
+    max-width: calc(100% - 60px);
+    margin: 0 auto;
+   
 }
+
 
 
 .task-table tr.Failed {
@@ -336,8 +345,9 @@ tr.task-row {
     overflow: hidden;
     border-radius: 15px !important;
     -moz-border-radius: 15px !important;
-    margin-left: 30px !important;
+    margin-right: 30px !important;
 }
+
 
 .task-row td:first-child {
     border-radius: 15px 0 0 15px !important;
@@ -668,13 +678,23 @@ form {
 
 /* ------------------------------------------------------ query 1200 ------------------------------------------------------ */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1920px) {
+    html, body {
+        background-color: #191a1c;
+        color: #fff;
+        margin-left: 1%;
+    }
+   header{
+    display: none;
+   }
+    
 }
 
 
 /* ------------------------------------------------------ query 1024 ------------------------------------------------------ */
 
 @media only screen and (max-width: 1024px) {
+  
 }
 
 
