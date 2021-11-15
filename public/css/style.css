@@ -678,7 +678,7 @@ form {
 
 /* ------------------------------------------------------ query 1200 ------------------------------------------------------ */
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 1440px) {
     html, body {
         background-color: #191a1c;
         color: #fff;
