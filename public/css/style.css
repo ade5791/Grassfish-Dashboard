@@ -313,6 +313,7 @@ table {
     width: 100%;
     max-width: calc(100% - 60px);
     margin: 0 auto;
+    text-align: center;
    
 }
 
@@ -329,6 +330,7 @@ table {
 
 .task-table tr.Waiting {
     color: #515867;
+    
 }
 
 tr.Active {
