@@ -14,7 +14,7 @@ router.get("/esteedashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "Estee Lauder") {
+      if (result.Brand == "Estee Lauder") {
         results.push(result);
       }
     });
@@ -32,7 +32,7 @@ router.post("/getesteeplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "Estee Lauder") {
+      if (result.Brand == "Estee Lauder") {
         results.push(result);
       }
     });

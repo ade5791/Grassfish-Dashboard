@@ -14,7 +14,7 @@ router.get("/bobbybrowndashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "Bobbi Brown") {
+      if (result.Brand == "Bobbi Brown") {
         results.push(result);
       }
     });
@@ -32,7 +32,7 @@ router.post("/getbobbybrownplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "Bobbi Brown") {
+      if (result.Brand == "Bobbi Brown") {
         results.push(result);
       }
     });

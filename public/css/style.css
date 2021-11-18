@@ -276,13 +276,13 @@ a .discordbtn span {
 html, body {
     background-color: #191a1c;
     color: #fff;
-    margin-left: 5%;
+    margin-left: 3%;
     
 }
 
 table {
     border-spacing: 0;
-   margin-right: 50%;
+  
 }
 
 .status-table {
@@ -290,7 +290,7 @@ table {
     max-width: 100%;
     border-collapse: separate;
     border-spacing: 0;
-    margin-right: 600;
+   
 }
 
 .task-table-titles {
@@ -313,7 +313,7 @@ table {
     width: 100%;
     max-width: calc(100% - 60px);
     margin: 0 auto;
-    text-align: center;
+    text-align: center !important;
    
 }
 
@@ -347,16 +347,20 @@ tr.task-row {
     overflow: hidden;
     border-radius: 15px !important;
     -moz-border-radius: 15px !important;
-    margin-right: 30px !important;
+ 
+    text-align: center !important;
+    
 }
 
 
 .task-row td:first-child {
     border-radius: 15px 0 0 15px !important;
+    text-align: center !important;
 }
 
 .task-row td:last-child {
     border-radius: 0 15px 15px 0 !important;
+    text-align: center !important;
 }
 
 .task-row td {
@@ -369,6 +373,7 @@ tr.task-row {
     padding: 10px;
     border-radius: 3;
     margin-left: 30px !important;
+    text-align: center !important;
 }
 
 .task-row .Inactive {
@@ -684,7 +689,7 @@ form {
     html, body {
         background-color: #191a1c;
         color: #fff;
-        margin-left: 1%;
+       
     }
    header{
     display: none;

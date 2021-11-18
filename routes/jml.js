@@ -15,7 +15,7 @@ router.get("/jmldashboard", function (req, res, next) {
 
     Pullresults.forEach((result) => {
       console.log(result);
-      if (result.name == "Jo Malone") {
+      if (result.Brand == "Jo Malone") {
         results.push(result);
       }
     });
@@ -34,7 +34,7 @@ router.post("/getjmlplayers", function (req, res, next) {
 
     Pullresults.forEach((result) => {
       console.log(result);
-      if (result.name == "Jo Malone") {
+      if (result.Brand == "Jo Malone") {
         results.push(result);
       }
     });

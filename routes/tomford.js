@@ -14,7 +14,7 @@ router.get("/tomforddashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "Tom Ford Beauty") {
+      if (result.Brand == "Tom Ford Beauty") {
         results.push(result);
       }
     });
@@ -31,7 +31,7 @@ router.post("/gettomfordplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "Tom Ford Beauty") {
+      if (result.Brand == "Tom Ford Beauty") {
         results.push(result);
       }
     });

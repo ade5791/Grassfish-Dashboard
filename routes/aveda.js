@@ -12,9 +12,9 @@ router.get("/avedadashboard", function (req, res, next) {
   dboperations.getelcPlayers().then((result) => {
     let results = [];
     let Pullresults = result[0];
-    console.log(Pullresults);
+
     Pullresults.forEach((result) => {
-      if (result.name == "Aveda") {
+      if (result.Brand == "Aveda") {
         results.push(result);
       }
     });
@@ -32,9 +32,7 @@ router.post("/getavedaplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      console.log(result);
-
-      if (result.name == "Aveda") {
+      if (result.Brand == "Aveda") {
         results.push(result);
       }
     });

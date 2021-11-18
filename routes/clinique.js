@@ -14,7 +14,7 @@ router.get("/cliniquedashboard", function (req, res, next) {
     let Pullresults = result[0];
     console.log(Pullresults);
     Pullresults.forEach((result) => {
-      if (result.name == "Clinique") {
+      if (result.Brand == "Clinique") {
         results.push(result);
       }
     });
@@ -32,7 +32,7 @@ router.post("/getcliniqueplayers", function (req, res, next) {
     let Pullresults = result[0];
     console.log(Pullresults);
     Pullresults.forEach((result) => {
-      if (result.name == "Clinique") {
+      if (result.Brand == "Clinique") {
         results.push(result);
       }
     });

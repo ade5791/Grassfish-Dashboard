@@ -14,7 +14,7 @@ router.get("/lamerdashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "La Mer") {
+      if (result.Brand == "La Mer") {
         results.push(result);
       }
     });
@@ -32,7 +32,7 @@ router.post("/getlamerplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "La Mer") {
+      if (result.Brand == "La Mer") {
         results.push(result);
       }
     });

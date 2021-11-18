@@ -14,7 +14,7 @@ router.get("/macdashboard", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "M.A.C.") {
+      if (result.Brand == "M.A.C.") {
         results.push(result);
       }
     });
@@ -32,7 +32,7 @@ router.post("/getmacplayers", function (req, res, next) {
     let Pullresults = result[0];
 
     Pullresults.forEach((result) => {
-      if (result.name == "M.A.C.") {
+      if (result.Brand == "M.A.C.") {
         results.push(result);
       }
     });
