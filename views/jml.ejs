@@ -4,6 +4,19 @@
         <meta charset="UTF-8">
         <title>Jo Malone Players</title>
        
+        <script type="text/javascript" src="/media/js/site.js?_=7f3ff05b95c2da3db6d895b5bf6d6487"></script>
+        <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <script type="text/javascript">
+
+function ExportToExcel(type, fn, dl) {
+       var elt = document.getElementById('DashTable');
+       var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+       return dl ?
+         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
+         XLSX.writeFile(wb, fn || ('JML_PlayersOffline.' + (type || 'xlsx')));
+    }
+      
+          </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
      
     </head>
@@ -13,6 +26,8 @@
         <h1>
          JO Malone Players       
         </h1>
+        <button onclick="ExportToExcel('xlsx')">Export to excel</button>
+
   </div>
    
 <table id="DashTable" class="display status-table" style="position: relative;">
